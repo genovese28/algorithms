@@ -2,8 +2,8 @@
 // zeroes, move all of the zeroes to the end of the array while maintaining
 // the original order of the other elements
 
-/*Input: array of numbers(write sown and ask)
-Ouputs: array?
+/*Ouputs: array?
+Input: array of numbers(write sown and ask)
 Constrants(limits input/output time or space): in place bonus
 Edge cases: all zeros, no zeros, empty*/
 
