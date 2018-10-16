@@ -6,8 +6,9 @@
 
 // Examples:
 
-console.log(longestSubstring('abcbdefgc')); //6, "cbdefg"
-// longestSubstring("abbcde")//4, "bcde"
+//console.log(longestSubstring('abcbdefgc')); //6, "cbdefg"
+//console.log(longestSubstring('abbcde')); //4, "bcde"
+console.log(longestSubstring('pwwkew'));
 
 function longestSubstring(string) {
   //make an object to count all characters
@@ -17,16 +18,15 @@ function longestSubstring(string) {
   let seen = {};
   let start = 0;
   let longestLen = 0;
-  let currLen = 0;
 
   for (let i = 0; i < string.length; i++) {
     let char = string[i];
-    if (seen[char] === undefined) {
-      seen[char] = 1;
+    if (seen[char] && seen[char] >= start) {
+      start = seen[char] + 1;
     } else {
-      start++;
-      currLen = i - start;
-      longestLen = Math.max(longestLen, currLen);
+      seen[char] = i;
+
+      longestLen = Math.max(longestLen, i - start + 1);
     }
   }
   return longestLen;
