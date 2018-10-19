@@ -21,13 +21,13 @@ function longestSubstring(string) {
 
   for (let i = 0; i < string.length; i++) {
     let char = string[i];
-    if (seen[char] && i >= start) {
-      start = seen[char] + 1;
-    } else {
+    if (seen[char] === undefined) {
       seen[char] = i;
-
       longestLen = Math.max(longestLen, i - start + 1);
+    } else {
+      start = Math.max(seen[char] + 1, start);
+      seen[char] = i;
     }
+    return longestLen;
   }
-  return longestLen;
 }
