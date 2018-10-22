@@ -8,26 +8,25 @@
 
 console.log(longestSubstring('abcbdefgc')); //6, "cbdefg"
 //console.log(longestSubstring('abbcde')); //4, "bcde"
-//console.log(longestSubstring('pwwkew'));
+//console.log(longestSubstring('pwwkew')); //3 "wke"
+//console.log(longestSubstring('tmmzuxt'));//5 "mzuxt"
 
 function longestSubstring(string) {
   //make an object to count all characters
-  //pointers, window, slow and fast pointer
-  //if we have seen char then
-
+  //pointers, window,
+  //if we have seen char then change the window and keep track of the lngest
   let seen = {};
   let start = 0;
-  let longestLen = 0;
+  let longest = 0;
 
   for (let i = 0; i < string.length; i++) {
     let char = string[i];
-    if (seen[char] === undefined) {
-      seen[char] = i;
-      longestLen = Math.max(longestLen, i - start + 1);
-    } else {
+
+    if (seen[char] !== undefined) {
       start = Math.max(seen[char] + 1, start);
-      seen[char] = i;
     }
-    return longestLen;
+    seen[char] = i;
+    longest = Math.max(i - start + 1, longest);
   }
+  return longest;
 }
