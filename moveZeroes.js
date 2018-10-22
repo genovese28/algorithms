@@ -13,6 +13,9 @@ Edge cases: all zeros, no zeros, empty*/
 
 //pointers - slow and fast- find nonZero swap, move both pointers, only move fast
 //pointer when at a 0(this way you ar at correct index to swap w slow pointer)
+
+//time: 0(n)
+//space: 0(1)
 function moveZeroes(array) {
   let curr = 0;
 
