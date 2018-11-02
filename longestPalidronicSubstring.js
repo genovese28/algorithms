@@ -1,5 +1,4 @@
-// Given a string find the longest substring substring
-
+// Given a string find the longest substring palidrone
 
 // outputs: string
 // inputs: string
@@ -9,3 +8,4 @@
 //console.log(longestPalidrone("babad"))// aba
 //console.log(longestPalidrone("cbbd"))//bb
 
+function longestPalidrone(string) {}
