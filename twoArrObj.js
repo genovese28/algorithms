@@ -21,6 +21,5 @@ function twoArrayObject(keys, val) {
       obj[keys[i]] = null;
     }
   }
-
   return obj;
 }
