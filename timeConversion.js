@@ -30,8 +30,8 @@
 // 19:05:45
 
 function timeConversion(s) {
-  //first maek into array so e can manioulate it
-  //check if am or pm to start condiotning logic
+  //first make into array so we can manipulate it
+  //check if am or pm to start conditioning logic
   //if its am, only need to make 12 00, change nothing else
   //if PM need to add 12 to all exept 12(stays the same)
   //then we need to get rid of the am/pm
