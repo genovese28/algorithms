@@ -11,11 +11,7 @@ Edge cases: more key array use null; more value array ignore*/
 // twoArrayObject(['a', 'b', 'c']  , [1, 2, 3, 4]) // {'a': 1, 'b': 2, 'c': 3}
 console.log(twoArrayObject(['x', 'y', 'z'], [1, 2])); // {'x': 1, 'y': 2, 'z': null}
 
-function twoArrayObject(keys, vals) {
-  let obj = '';
-}
-
-// function twoArrayObject(keys, val) {
+//function twoArrayObject(keys, val) {
 //   let obj = {};
 
 //   for (let i = 0; i < keys.length; i++) {
